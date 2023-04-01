@@ -13,7 +13,11 @@ public class QL_Order_Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+        String sqlNhanVien = "CREATE TABLE NGUOIDUNG(id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "name TEXT NOT NULL," +
+                "userName TEXT NOT NULL," +
+                " matKhau TEXT NOT NULL)";
+        sqLiteDatabase.execSQL(sqlNhanVien);
     }
 
     @Override
